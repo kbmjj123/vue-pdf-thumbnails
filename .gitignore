@@ -4,4 +4,5 @@ playwright-report
 test-results
 *.log
 .DS_Store
+*.tgz
 examples/demo/public/
