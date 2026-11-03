@@ -36,6 +36,37 @@ Import the stylesheet once (side-effect import):
 import 'vue-pdf-thumbnails/style.css'
 ```
 
+## CDN
+
+Once the package is published to npm, it is **automatically mirrored** by
+[jsDelivr](https://www.jsdelivr.com) and [unpkg](https://unpkg.com) — no separate
+publish step is needed. Use a versioned URL (swap `@0.1.0` for `@latest` or a
+specific tag):
+
+```html
+<!-- ESM in the browser — jsDelivr rewrites the `vue` peer import automatically -->
+<script type="module">
+  import { PdfPreview } from 'https://cdn.jsdelivr.net/npm/vue-pdf-thumbnails@0.1.0/+esm'
+</script>
+```
+
+Direct / bundler URLs:
+
+```bash
+# jsDelivr — raw ESM file
+https://cdn.jsdelivr.net/npm/vue-pdf-thumbnails@0.1.0/dist/vue-pdf-thumbnails.js
+# jsDelivr — browser-ready ESM (recommended external link)
+https://cdn.jsdelivr.net/npm/vue-pdf-thumbnails@0.1.0/+esm
+# unpkg — ESM rewrite via ?module
+https://unpkg.com/vue-pdf-thumbnails@0.1.0/dist/vue-pdf-thumbnails.js?module
+# Stylesheet
+https://cdn.jsdelivr.net/npm/vue-pdf-thumbnails@0.1.0/dist/style.css
+```
+
+> The library needs **Vue 3** as a peer. With the `+esm` / `?module` CDN forms the
+> `vue` import is resolved for you; with the raw bundle you must provide Vue yourself
+> (e.g. `https://unpkg.com/vue@3/dist/vue.esm-browser.js`).
+
 ## Quick start
 
 ```vue

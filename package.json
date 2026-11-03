@@ -4,14 +4,14 @@
   "description": "Virtualized, worker-rendered PDF thumbnails for Vue 3 — optional selectable text & annotation layers, font-fallback included.",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://minopdf.com",
+  "homepage": "https://github.com/kbmjj123/vue-pdf-thumbnails",
   "author": "MinoPDF",
   "repository": {
     "type": "git",
-    "url": "https://github.com/minopdf/vue-pdf-thumbnails.git"
+    "url": "https://github.com/kbmjj123/vue-pdf-thumbnails.git"
   },
   "bugs": {
-    "url": "https://minopdf.com/contact"
+    "url": "https://github.com/kbmjj123/vue-pdf-thumbnails/issues"
   },
   "keywords": [
     "vue",
@@ -37,6 +37,8 @@
   "main": "./dist/vue-pdf-thumbnails.js",
   "module": "./dist/vue-pdf-thumbnails.js",
   "types": "./dist/index.d.ts",
+  "unpkg": "./dist/vue-pdf-thumbnails.js",
+  "jsdelivr": "./dist/vue-pdf-thumbnails.js",
   "files": [
     "dist"
   ],
