@@ -1,0 +1,78 @@
+{
+  "name": "vue-pdf-thumbnails",
+  "version": "0.1.0",
+  "description": "Virtualized, worker-rendered PDF thumbnails for Vue 3 — optional selectable text & annotation layers, font-fallback included.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://minopdf.com",
+  "author": "MinoPDF",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minopdf/vue-pdf-thumbnails.git"
+  },
+  "bugs": {
+    "url": "https://minopdf.com/contact"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "pdf",
+    "pdf.js",
+    "preview",
+    "thumbnail",
+    "virtualized",
+    "worker",
+    "pdfjs"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-pdf-thumbnails.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "main": "./dist/vue-pdf-thumbnails.js",
+  "module": "./dist/vue-pdf-thumbnails.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:visual": "node scripts/make-sample-pdf.mjs && playwright test",
+    "prepublishOnly": "pnpm build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.3.289"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/test-utils": "^2.4.6",
+    "vite-plugin-dts": "^4.3.0",
+    "jsdom": "^25.0.1",
+    "pdf-lib": "^1.11.1",
+    "@playwright/test": "^1.48.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4",
+    "vue": "^3.5.12",
+    "vue-tsc": "^2.1.10"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "publishConfig": {
+    "access": "public"
+  }
+}
